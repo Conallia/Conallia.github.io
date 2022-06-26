@@ -13,6 +13,7 @@ body {
 .welcome h1 {
 	font-size: 40px;
 	color: #65393d;
+	word-wrap: break-word;
 }
 
 .welcome h2 {
@@ -24,6 +25,7 @@ body {
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
+	text-align: center;
 }
 
 
@@ -43,10 +45,12 @@ body {
 
 .info {
 	display: flex;
-	flex-flow: row nowrap;
+	flex-flow: row wrap;
 	align-items: center;
 	justify-content: center;
 	background-color: #d9c5b2;
+	border: 10px solid #d9c5b2;
+	border-radius: 15px;
 	padding: 22px;
 	width: fit-content;
 	margin: 0 auto;
@@ -56,13 +60,35 @@ body {
 	display: flex;
 	justify-content: flex-start;
 	flex-flow: column;
+	text-align: left;
 }
 
 .links a {
 	color: #5c5248;
+	transition: color 0.15s;
+	transition: text-shadow 0.15s;
 }
 
 .links a:visited, .links a:hover {
 	color: #423832;
+	text-shadow: 0 0 2px #5c5248;
+	transition: color 0.15s, text-shadow 0.15s;
+}
+
+.links h2 {
+	color: #423832;
 	font-weight: bold;
+	text-align: left;
+}
+
+footer {
+	text-align: right;
+	margin-top: 10%;
+}
+
+#quote {
+	color: #5c5248;
+	font-style: italic;
+	margin-right: 5px;
+	width: 100%;
 }
